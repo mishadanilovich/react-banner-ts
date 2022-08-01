@@ -1,4 +1,5 @@
 @import "styles/colors.scss";
+@import "styles/mixins.scss";
 
 *,
 *::before,
@@ -26,8 +27,16 @@ button {
 }
 
 h1 {
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.41px;
+  @include title-typography
+}
+
+h2 {
+  @include title-typography
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: -0.09px;
 }

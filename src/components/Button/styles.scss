@@ -1,14 +1,15 @@
 @import "src/styles/colors.scss";
 
-.button-container {
-  height: 50px;
+.button {
+  min-height: 50px;
   width: 100%;
   border-radius: 100px;
+  padding-bottom: 3px;
 
   background: $color-red;
   color: $color-white;
 
-  font-size: 24px;
+  font-size: 22.5px;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: 0.2px;

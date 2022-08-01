@@ -1,4 +1,4 @@
-.container {
+.banner {
   position: absolute;
   //top: 50%;
   //left: 50%;
@@ -13,12 +13,12 @@
 
   padding: 40px 20px 24px;
 
-  .header {
+  &__title {
     text-transform: uppercase;
     text-align: center;
   }
 
-  .description {
+  &__description {
     font-size: 17px;
     font-weight: 400;
     line-height: 22px;
