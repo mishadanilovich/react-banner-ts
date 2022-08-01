@@ -1,11 +1,12 @@
 import cn from 'classnames';
+import { Star } from 'icons';
 import { PriceTicket, RateBanner } from 'components';
 import { PlanProps } from './types';
 
 import './styles.scss';
 
 export const Plan = ({ data, onClick, isSelected }: PlanProps) => {
-  const { title, description, price, isPopular, id } = data;
+  const { title, description, price, isPopular, id, isShowStar } = data;
 
   return (
     <div
@@ -17,7 +18,10 @@ export const Plan = ({ data, onClick, isSelected }: PlanProps) => {
         {isPopular && (
           <RateBanner className={cn({ 'rate-banner--selected': isSelected })} />
         )}
-        <h3 className="plan-info__title">{title}</h3>
+        <h3 className="plan-info__title">
+          {title}
+          {isShowStar && <Star className="star-icon" />}
+        </h3>
         <p className="plan-info__description">{description}</p>
       </div>
       <PriceTicket className="plan__ticket" price={price} />

@@ -5,6 +5,7 @@ export interface BasePlan {
   price: number;
   recurrence?: string;
   isPopular?: boolean;
+  isShowStar?: boolean;
 }
 
 export interface PlanProps {

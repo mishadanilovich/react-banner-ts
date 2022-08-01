@@ -16,8 +16,9 @@ export const planListConfiguration: BasePlan[] = [
   },
   {
     id: '3',
-    title: 'Life time ⭐️',
+    title: 'Life time',
     description: '$99.99 one time fee',
     price: 0.55,
+    isShowStar: true,
   },
 ];
