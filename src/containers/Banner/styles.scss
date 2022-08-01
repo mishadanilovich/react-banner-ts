@@ -6,7 +6,23 @@
 
   height: 592px;
   width: 375px;
-  background: black;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 
   padding: 40px 20px 24px;
+
+  .header {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: center;
+  }
 }
