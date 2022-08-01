@@ -1,19 +1,36 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Plan } from 'components';
+import { useAppDispatch } from 'store';
 import { PlanListProps } from './types';
 import { planListConfiguration } from './constants';
+import { setSelectedPlanData } from 'containers/Banner/store/slice';
 
 import './styles.scss';
 
 export const PlanList = ({ title }: PlanListProps) => {
-  const popularPlanId = useMemo(
-    () => planListConfiguration.find((item) => item.isPopular)?.id ?? '',
+  const dispatch = useAppDispatch();
+  const popularPlan = useMemo(
+    () => planListConfiguration.find((item) => item.isPopular),
     []
   );
-  const [selectedPlan, setSelectedPlan] = useState(popularPlanId);
+  const [selectedPlan, setSelectedPlan] = useState(popularPlan?.id ?? '');
+
+  useEffect(() => {
+    if (popularPlan) {
+      const { description, title } = popularPlan;
+      dispatch(setSelectedPlanData({ description, title }));
+    }
+  }, []);
 
   const handlePlanClick = (planId: string) => {
-    console.log(planId);
+    const planData = planListConfiguration.find(
+      (item) => item.id === selectedPlan
+    );
+
+    if (!planData) return;
+
+    const { description, title } = planData;
+    dispatch(setSelectedPlanData({ description, title }));
     setSelectedPlan(planId);
   };
 
