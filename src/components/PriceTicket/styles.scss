@@ -1,0 +1,51 @@
+@import "src/styles/colors.scss";
+
+.price-ticket {
+  height: 45px;
+  width: 70.5px;
+  position: relative;
+  color: $color-light-pink;
+  background-color: $color-light-pink;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -9.5px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 22.5px solid transparent;
+    border-right: 10px solid currentColor;
+    border-bottom: 22.5px solid transparent;
+    color: inherit;
+  }
+
+  &__amount {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    display: flex;
+
+    color: $color-dark-black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    vertical-align: top;
+
+    &-primary {
+      margin-left: 1px;
+      margin-right: 2px;
+      font-size: 36px;
+      line-height: 30px;
+    }
+
+    .recurrence {
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 10px;
+    }
+  }
+}
