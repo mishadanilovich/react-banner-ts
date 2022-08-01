@@ -6,12 +6,13 @@
   position: relative;
   color: $color-light-pink;
   background-color: $color-light-pink;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 
   &::before {
     content: '';
     position: absolute;
-    left: -8px;
+    left: -10px;
     top: 0;
     width: 0;
     height: 0;
@@ -19,7 +20,6 @@
     border-right: 10px solid currentColor;
     border-bottom: 22.5px solid transparent;
     color: inherit;
-    border-radius: inherit;
   }
 
   &__amount {

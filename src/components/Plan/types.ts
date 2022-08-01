@@ -1,4 +1,5 @@
 export interface BasePlan {
+  id: string;
   title: string;
   description: string;
   price: number;
@@ -8,4 +9,6 @@ export interface BasePlan {
 
 export interface PlanProps {
   data: BasePlan;
+  onClick?: (planId: string) => void;
+  isSelected?: boolean;
 }

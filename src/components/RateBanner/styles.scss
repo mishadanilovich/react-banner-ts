@@ -1,6 +1,7 @@
 @import "src/styles/colors.scss";
 
 .rate-banner {
+  color: $color-dark-black;
   position: relative;
   height: 19px;
   max-width: 125px;
@@ -12,7 +13,6 @@
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  line-height: 15px;
 
   &::after {
     content: '';
@@ -23,5 +23,11 @@
     border-right: 8px solid $color-white;
     border-bottom: 9.5px solid transparent;
     border-radius: inherit;
+  }
+}
+
+.rate-banner--selected {
+  &::after {
+    border-right: 8px solid transparent;
   }
 }
