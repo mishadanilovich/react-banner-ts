@@ -3,8 +3,8 @@ import { RateBannerProps } from './types';
 
 import './styles.scss';
 
-const mainText = 'Most popular';
+const RATE_TEXT = 'Most popular';
 
 export const RateBanner = ({ className }: RateBannerProps) => {
-  return <div className={cn('rate-banner', className)}>{mainText}</div>;
+  return <div className={cn('rate-banner', className)}>{RATE_TEXT}</div>;
 };

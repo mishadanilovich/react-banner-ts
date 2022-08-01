@@ -3,6 +3,8 @@ import { PriceTicketProps } from './types';
 
 import './styles.scss';
 
+const RECURRENCE_TEXT = 'per day';
+
 export const PriceTicket = ({ className, price }: PriceTicketProps) => {
   const formatPrice = price.toString().split('.');
 
@@ -12,7 +14,7 @@ export const PriceTicket = ({ className, price }: PriceTicketProps) => {
         $<span className="price-ticket__amount-primary">{formatPrice[0]}</span>
         <div>
           <p>{formatPrice[1] || ''}</p>
-          <p className="recurrence">per day</p>
+          <p className="recurrence">{RECURRENCE_TEXT}</p>
         </div>
       </div>
     </span>
